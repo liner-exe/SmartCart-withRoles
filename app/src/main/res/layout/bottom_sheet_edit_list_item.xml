@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+            android:id="@+id/drag_handle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/li_edit_name_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?colorOnSurface"
+            android:hint="@string/list_item_edit_product_name"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/drag_handle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/li_edit_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="@string/list_item_edit_product_name"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:maxLines="1"
+                android:singleLine="true">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/li_edit_quantity_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/list_item_edit_quantity"
+            app:expandedHintEnabled="false"
+
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/li_edit_measure_unit_input_layout"
+            app:layout_constraintTop_toBottomOf="@id/li_edit_name_input_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/li_edit_quantity_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:gravity="end">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/li_edit_measure_unit_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="8dp"
+            android:hint="@string/list_item_edit_unit"
+            app:expandedHintEnabled="false"
+
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/li_edit_quantity_input_layout"
+            app:layout_constraintEnd_toStartOf="@id/li_edit_button_minus"
+            app:layout_constraintTop_toBottomOf="@id/li_edit_name_input_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/li_edit_measure_unit_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/li_edit_button_minus"
+            style="@style/Widget.Material3.Button.Icon"
+            android:layout_width="48dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            app:icon="@drawable/remove"
+            app:iconSize="16dp"
+
+            app:layout_constraintBottom_toBottomOf="@id/li_edit_measure_unit_input_layout"
+            app:layout_constraintStart_toEndOf="@id/li_edit_measure_unit_input_layout"
+            app:layout_constraintTop_toTopOf="@id/li_edit_measure_unit_input_layout"
+            app:layout_constraintEnd_toStartOf="@id/li_edit_button_plus">
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/li_edit_button_plus"
+            style="@style/Widget.Material3.Button.Icon"
+            android:layout_width="48dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            app:icon="@drawable/add"
+            app:iconSize="16dp"
+
+            app:layout_constraintBottom_toBottomOf="@id/li_edit_measure_unit_input_layout"
+            app:layout_constraintStart_toEndOf="@id/li_edit_button_minus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/li_edit_measure_unit_input_layout">
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/li_edit_price_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/list_item_edit_price_per_unit"
+            app:expandedHintEnabled="false"
+
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@id/li_edit_quantity_input_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/li_edit_measure_unit_input_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/li_edit_price_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/li_price_total_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+
+            app:layout_constraintHorizontal_weight="0.5"
+            app:layout_constraintTop_toTopOf="@id/li_edit_price_input_layout"
+            app:layout_constraintBottom_toBottomOf="@id/li_edit_price_input_layout"
+            app:layout_constraintStart_toEndOf="@id/li_edit_price_input_layout"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/list_item_edit_price_total"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/li_edit_total_price_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/li_metadata_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/li_price_total_layout">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/li_edit_card_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/category"
+                        app:tint="?attr/colorPrimary">
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/list_item_edit_category"
+                        android:textStyle="bold"
+                        android:textSize="14sp">
+                    </TextView>
+                    
+                    <TextView
+                        android:id="@+id/li_edit_category_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category_name"
+                        android:textAlignment="center"
+                        android:textSize="12sp">
+                    </TextView>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/li_edit_card_store"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:clickable="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/store"
+                        app:tint="?attr/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/list_item_edit_store"
+                        android:textStyle="bold"
+                        android:textSize="14sp">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/li_edit_store_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/store_name"
+                        android:textAlignment="center"
+                        android:textSize="12sp">
+                    </TextView>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/li_edit_button_delete"
+            style="@style/Widget.Material3.Button.Icon"
+            android:layout_width="48dp"
+            android:layout_height="0dp"
+            app:icon="@drawable/delete"
+            app:iconSize="16dp"
+            android:layout_marginTop="16dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/li_edit_button_done"
+            app:layout_constraintTop_toBottomOf="@id/li_metadata_layout">
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/li_edit_button_done"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/action_done"
+            android:layout_marginStart="8dp"
+
+            app:layout_constraintStart_toEndOf="@id/li_edit_button_delete"
+            app:layout_constraintTop_toTopOf="@id/li_edit_button_delete"
+            app:layout_constraintTop_toBottomOf="@id/li_edit_button_delete"
+            app:layout_constraintBottom_toBottomOf="@id/li_edit_button_delete"
+            app:layout_constraintEnd_toEndOf="parent">
+        </com.google.android.material.button.MaterialButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

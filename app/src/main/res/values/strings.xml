@@ -1,0 +1,159 @@
+<resources>
+    <!-- Global -->
+    <string name="app_name" translatable="false">SmartCart</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+    <!-- Tabs -->
+    <string name="navigation_home">Главная</string>
+    <string name="navigation_settings">Настройки</string>
+    <string name="navigation_monitoring">Учет</string>
+
+    <!-- Home -->
+    <string name="list_name">Название списка</string>
+    <string name="home_empty_list_title">У вас нет списков покупок</string>
+    <string name="home_empty_list_message">Нажмите «+», чтобы добавить список покупок</string>
+    <string name="home_search_bar_hint">Поиск списка покупок...</string>
+
+    <!-- Monitoring -->
+    <string name="monitoring_title">Аналитика расходов</string>
+    <string name="monitoring_categories_title">Траты по категориям</string>
+    <string name="monitoring_stores_title">Траты по магазинам</string>
+    <string name="monitoring_total_spent">Потрачено за всё время</string>
+    <string name="monitoring_pie_title">Категории</string>
+    <string name="monitoring_pie_stores_title">Магазины</string>
+    <string name="monitoring_pie_error_message">"Нет товаров для анализа"</string>
+
+    <!-- Settings -->
+    <string name="settings_header_data">Управление данными</string>
+    <string name="settings_header_interface">Настройки интерфейса</string>
+    <string name="settings_header_info">Информация</string>
+    
+    <string name="settings_products">Продукты</string>
+    <string name="settings_products_sub">Добавление и редактирование продуктов</string>
+
+    <string name="settings_categories">Категории</string>
+    <string name="settings_categories_sub">Добавление и редактирование категорий продуктов</string>
+
+    <string name="settings_stores">Магазины</string>
+    <string name="settings_stores_sub">Редактирование списка магазинов</string>
+
+    <string name="settings_currency">Валюта</string>
+    <string name="settings_language">Язык</string>
+    <string name="settings_theme">Тема</string>
+
+    <string name="settings_about_app">О приложении</string>
+    <string name="settings_about_app_sub">Узнать о приложении</string>
+    
+    <string name="settings_dialog_title_currency">Выберите валюту</string>
+    <string name="settings_dialog_title_language">Выберите язык</string>
+    <string name="settings_dialog_title_theme">Выберите тему</string>
+
+    <string name="settings_system_defaults">По умолчанию (система)</string>
+
+    <string name="lang_ru">Русский</string>S
+    <string name="lang_en">Английский</string>
+
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Темная</string>
+
+    <string name="settings_dialog_about_message">Версия %1$s\nРазработчик: %2$s</string>
+
+    <!-- Categories -->
+    <string name="no_category">Без категории</string>
+
+    <!-- Products Management -->
+    <string name="products_management">Управление продуктами</string>
+    <string name="product_name">Название продукта</string>
+    <string name="pm_empty_list_title">Список продуктов пуст</string>
+    <string name="pm_empty_list_message">Нажмите «+», чтобы добавить свой первый продукт</string>
+    <string name="pm_search_bar_hint">Поиск продуктов...</string>
+
+    <!-- ListItem Add -->
+    <string name="product_selection">Выбор продукта</string>
+    <string name="ps_empty_list_title">Нет продуктов</string>
+    <string name="ps_empty_list_message">Добавьте хотя бы один продукт</string>
+
+    <!-- Category Management -->
+    <string name="categories_management">Управление категориями</string>
+    <string name="category_name">Название категории</string>
+    <string name="cm_empty_list_title">Список категорий пуст</string>
+    <string name="cm_empty_list_message">Нажмите «+», чтобы добавить свою первую категорию</string>
+    <string name="cm_search_bar_hint">Поиск категории...</string>
+
+    <!-- Category Selection -->
+    <string name="cs_empty_list_title">Нет категорий</string>
+    <string name="cs_empty_list_message">Добавьте хотя бы одну категорию</string>
+    <string name="category_selection">Выбор категории</string>
+
+    <!-- Stores Management -->
+    <string name="stores_management">Управление магазинами</string>
+    <string name="store_name">Название магазина</string>
+    <string name="store_add">Добавление магазина</string>
+    <string name="sm_empty_list_title">Список магазинов пуст</string>
+    <string name="sm_empty_list_message">Нажмите «+», чтобы добавить свой первый магазин</string>
+    <string name="sm_search_bar_hint">Поиск магазинов...</string>
+
+    <!-- Store Selection -->
+    <string name="store_selection">Выбор магазина</string>
+    <string name="ss_empty_list_title">Нет магазинов</string>
+    <string name="ss_empty_list_message">Добавьте хотя бы один магазин</string>
+
+    <!-- Category Add / Edit -->
+    <string name="category_add">Добавление категории</string>
+    <string name="category_edit">Редактирование категории</string>
+
+    <!-- Dialog add list -->
+    <string name="dialog_add_list_title">Новый список</string>
+    <string name="dialog_add_list_message">Введите название списка</string>
+    <string name="dialog_add_list_error_empty">Название не может быть пустым!</string>
+
+    <!-- Dialog add product -->
+    <string name="dialog_add_product_title">Новый товар</string>
+    <string name="dialog_add_product_message">Введите название товара</string>
+    <string name="dialog_add_product_error_empty">Название не может быть пустым!</string>
+
+    <!-- Dialog add store -->
+    <string name="dialog_add_store_title">Новый магазин</string>
+    <string name="dialog_add_store_message">Введите название магазина</string>
+    <string name="dialog_add_store_error_empty">Название не может быть пустым!</string>
+    
+    <!-- List -->
+    <string name="list_total_summary">Итого</string>
+
+    <!-- Product Edit Sheet -->
+    <string name="product_edit_product_name">Название продукта</string>
+    <string name="product_edit_change_category">Изменить категорию</string>
+
+    <!-- ListItem Edit Sheet -->
+    <string name="list_item_edit_product_name">Название продукта</string>
+    <string name="list_item_edit_quantity">Количество</string>
+    <string name="list_item_edit_unit">Ед. измерения</string>
+    <string name="list_item_edit_price_per_unit">Цена за %1$s.</string>
+    <string name="list_item_edit_price_total">Всего</string>
+    <string name="list_item_edit_category">Категория</string>
+    <string name="list_item_edit_store">Магазин</string>
+
+    <string name="list_item_no_category">Не указана</string>
+    <string name="list_item_no_store">Не выбран</string>
+    <string name="list_item_edit_default_unit">шт</string>
+    <string name="list_item_edit_default_price_format_error">Формат 99, 99.9 или 99.99</string>
+
+    <!-- Search -->
+    <string name="search_nothing_found_title">Ничего не найдено</string>
+    <string name="search_nothing_found_message">Попробуйте изменить запрос</string>
+
+    <!-- Actions -->
+    <string name="action_edit">Редактировать</string>
+    <string name="action_rename">Переименовать</string>
+    <string name="action_delete">Удалить</string>
+    <string name="action_cancel">Отмена</string>
+    <string name="action_add">Добавить</string>
+    <string name="action_done">Готово</string>
+    <string name="action_more">Ещё</string>
+
+    <!-- Store Actions -->
+    <string name="action_reset_store">Сбросить магазин</string>
+
+    <!-- Category Actions -->
+    <string name="action_reset_category">Сбросить категорию</string>
+</resources>

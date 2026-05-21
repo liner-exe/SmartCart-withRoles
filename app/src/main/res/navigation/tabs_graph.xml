@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tabs_graph"
+    app:startDestination="@id/fragmentHome">
+
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.liner_exe.smartcart.fragments.FragmentHome"
+        android:label="FragmentHome" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentMonitoring"
+            app:destination="@id/fragmentMonitoring" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentSettings"
+            app:destination="@id/fragmentSettings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentMonitoring"
+        android:name="com.liner_exe.smartcart.fragments.FragmentMonitoring"
+        android:label="fragment_monitoring"
+        tools:layout="@layout/fragment_monitoring" >
+        <action
+            android:id="@+id/action_fragmentMonitoring_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentMonitoring_to_fragmentSettings"
+            app:destination="@id/fragmentSettings" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSettings"
+        android:name="com.liner_exe.smartcart.fragments.FragmentSettings"
+        android:label="FragmentSettings" >
+        <action
+            android:id="@+id/action_fragmentSettings_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentSettings_to_fragmentMonitoring"
+            app:destination="@id/fragmentMonitoring" />
+    </fragment>
+
+</navigation>

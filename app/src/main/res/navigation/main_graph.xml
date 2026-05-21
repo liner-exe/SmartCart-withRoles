@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.liner_exe.smartcart.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_fragmentList"
+            app:destination="@id/fragmentList"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_mainFragment_to_productsManagementFragment"
+            app:destination="@id/productsManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_categoryManagementFragment"
+            app:destination="@id/categoryManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_storesManagementFragment"
+            app:destination="@id/storesManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentList"
+        android:name="com.liner_exe.smartcart.fragments.FragmentList"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_fragmentList_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="listName"
+            app:argType="string"
+            android:defaultValue="list_name" />
+        <argument
+            android:name="listId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_fragmentList_to_productAddFragment"
+            app:destination="@id/productAddFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_fragmentList_to_categorySelectionFragment"
+            app:destination="@id/categorySelectionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_fragmentList_to_storeSelectionFragment"
+            app:destination="@id/storeSelectionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsManagementFragment"
+        android:name="com.liner_exe.smartcart.fragments.ProductsManagementFragment"
+        android:label="ProductsManagementFragment" >
+        <action
+            android:id="@+id/action_productsManagementFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_productsManagementFragment_to_categorySelectionFragment"
+            app:destination="@id/categorySelectionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryManagementFragment"
+        android:name="com.liner_exe.smartcart.fragments.CategoriesManagementFragment"
+        android:label="CategoryManagementFragment" >
+        <action
+            android:id="@+id/action_categoryManagementFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_categoryManagementFragment_to_categoryEditFragment"
+            app:destination="@id/categoryEditFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/categoryEditFragment"
+        android:name="com.liner_exe.smartcart.fragments.CategoryEditFragment"
+        android:label="fragment_category_edit"
+        tools:layout="@layout/fragment_category_edit" >
+        <action
+            android:id="@+id/action_categoryEditFragment_to_categoryManagementFragment"
+            app:destination="@id/categoryManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="category"
+            app:argType="com.liner_exe.domain.models.Category"
+            app:nullable="true"
+            android:defaultValue="@null">
+        </argument>
+    </fragment>
+    <fragment
+        android:id="@+id/categorySelectionFragment"
+        android:name="com.liner_exe.smartcart.fragments.CategorySelectionFragment"
+        android:label="CategorySelectionFragment" >
+        <action
+            android:id="@+id/action_categorySelectionFragment_to_productsManagementFragment"
+            app:destination="@id/productsManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="product"
+            app:argType="com.liner_exe.domain.models.Product" />
+        <action
+            android:id="@+id/action_categorySelectionFragment_to_fragmentList"
+            app:destination="@id/fragmentList"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/productAddFragment"
+        android:name="com.liner_exe.smartcart.fragments.ListItemAddFragment"
+        android:label="ProductAddFragment" >
+        <action
+            android:id="@+id/action_productAddFragment_to_fragmentList"
+            app:destination="@id/fragmentList"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="listId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/storesManagementFragment"
+        android:name="com.liner_exe.smartcart.fragments.StoresManagementFragment"
+        android:label="StoresManagementFragment" >
+        <action
+            android:id="@+id/action_storesManagementFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeSelectionFragment"
+        android:name="com.liner_exe.smartcart.fragments.StoreSelectionFragment"
+        android:label="StoreSelectionFragment" >
+        <action
+            android:id="@+id/action_storeSelectionFragment_to_fragmentList"
+            app:destination="@id/fragmentList"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="listItem"
+            app:argType="com.liner_exe.domain.models.ListItem" />
+    </fragment>
+</navigation>

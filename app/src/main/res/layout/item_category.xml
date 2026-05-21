@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/rounded_layout"
+        android:backgroundTint="?attr/colorSurfaceContainerLow"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/category_item_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </TextView>
+
+        <TextView
+            android:id="@+id/category_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Category"
+            android:layout_marginStart="10dp"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
+
+            app:layout_constraintStart_toEndOf="@id/category_item_emoji"
+            app:layout_constraintTop_toTopOf="@id/category_item_emoji"
+            app:layout_constraintBottom_toBottomOf="@id/category_item_emoji"/>
+
+        <ImageButton
+            android:id="@+id/category_item_button_more"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/more"
+            app:tint="?attr/colorOnSurfaceVariant"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/category_item_emoji"
+            app:layout_constraintBottom_toBottomOf="@id/category_item_emoji"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

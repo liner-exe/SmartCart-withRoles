@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="?attr/colorSurface"
+        tools:context=".fragments.CategoryEditFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/colorSurfaceContainer"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/app_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:title="@string/category_add"
+                app:titleTextColor="?attr/colorOnSurface"
+                app:navigationIcon="@drawable/arrow_back"
+                app:navigationIconTint="?attr/colorOnSurface">
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/il_category_edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingHorizontal="16dp"
+
+            app:layout_constraintTop_toBottomOf="@id/appTopBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:expandedHintEnabled="false">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_category_edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/category_name"
+                android:singleLine="true"
+                android:maxLines="1">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.emoji2.emojipicker.EmojiPickerView
+            android:id="@+id/emoji_picker_category_edit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+
+            app:layout_constraintTop_toBottomOf="@id/il_category_edit_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </androidx.emoji2.emojipicker.EmojiPickerView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_done_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/done"
+            android:contentDescription="@string/action_done"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

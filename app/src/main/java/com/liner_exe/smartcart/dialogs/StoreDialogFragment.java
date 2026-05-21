@@ -1,0 +1,120 @@
+package com.liner_exe.smartcart.dialogs;
+
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.liner_exe.smartcart.R;
+import com.liner_exe.smartcart.databinding.DialogAddStoreBinding;
+
+public class StoreDialogFragment extends DialogFragment {
+    public interface OnStoreAddedListener {
+        void onAdd(String name);
+    }
+
+    private OnStoreAddedListener listener;
+    private String currentName;
+
+    private DialogAddStoreBinding binding;
+
+    public static StoreDialogFragment newInstance(String currentName, OnStoreAddedListener listener) {
+        StoreDialogFragment fragment = new StoreDialogFragment();
+        fragment.listener = listener;
+        fragment.currentName = currentName;
+
+        return fragment;
+    }
+
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        super.onCreateDialog(savedInstanceState);
+
+        binding = DialogAddStoreBinding.inflate(getLayoutInflater());
+        TextInputEditText editText = binding.editStoreName;
+
+        if (currentName != null) {
+            editText.setText(currentName);
+            editText.setSelection(currentName.length());
+        }
+
+        AlertDialog dialog = new MaterialAlertDialogBuilder(requireContext())
+                .setTitle(currentName == null ? R.string.dialog_add_store_title : R.string.action_rename)
+                .setMessage(R.string.dialog_add_store_message)
+                .setView(binding.getRoot())
+                .setPositiveButton(currentName == null ? R.string.action_add : R.string.action_rename, null)
+                .setNegativeButton(R.string.action_cancel, null)
+                .create();
+
+        setupListeners(dialog);
+
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+            editText.requestFocus();
+        }
+
+        return dialog;
+    }
+
+    private void setupListeners(AlertDialog dialog) {
+        binding.editStoreName.setOnEditorActionListener((textView, actionID, event) -> {
+            if (actionID == EditorInfo.IME_ACTION_DONE) {
+                attemptSave(binding.editStoreName, binding.storeAddInputLayout, dialog);
+                return true;
+            }
+            return false;
+        });
+
+        binding.editStoreName.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                binding.storeAddInputLayout.setError(null);
+                binding.storeAddInputLayout.setErrorEnabled(false);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {}
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+        });
+
+        dialog.setOnShowListener(dialogInterface -> {
+            Button button = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
+
+            if (button != null) {
+                button.setOnClickListener(v -> {
+                    attemptSave(binding.editStoreName, binding.storeAddInputLayout, dialog);
+                });
+            }
+        });
+    }
+
+    private void attemptSave(TextInputEditText editText, TextInputLayout inputLayout,
+                             AlertDialog dialog) {
+        String name = editText.getText() != null ? editText.getText().toString().trim() : "";
+
+        if (name.isEmpty()) {
+            inputLayout.setError(getString(R.string.dialog_add_store_error_empty));
+            inputLayout.setErrorEnabled(true);
+        } else {
+            if (listener != null) {
+                listener.onAdd(name);
+            }
+            dialog.dismiss();
+        }
+    }
+}

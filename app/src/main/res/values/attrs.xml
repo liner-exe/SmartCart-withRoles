@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingsItemButton">
+        <attr name="itemText" format="string" />
+        <attr name="itemSubtitle" format="string" />
+        <attr name="itemIcon" format="reference" />
+        <attr name="itemColor" format="color" />
+    </declare-styleable>
+
+</resources>
