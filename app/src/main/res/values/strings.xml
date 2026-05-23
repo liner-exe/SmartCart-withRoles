@@ -173,4 +173,10 @@
     <string name="premium_stub_title">Аналитика доступна в Premium</string>
     <string name="premium_stub_description">Отслеживайте свои расходы по категориям и магазинам с помощью наглядных графиков.</string>
     <string name="premium_stub_btn_more">Подробнее о Premium</string>
+
+    <string name="secret_dialog_title">Секретное меню: Подписка</string>
+    <string name="secret_role_regular">Обычный пользователь (Regular)</string>
+    <string name="secret_role_premium">Премиум подписка (Premium)</string>
+    <string name="secret_dialog_btn_cancel">Отмена</string>
+    <string name="secret_toast_regular_activated">Активирован обычный доступ</string>
 </resources>

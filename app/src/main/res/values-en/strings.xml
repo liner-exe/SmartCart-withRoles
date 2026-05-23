@@ -112,4 +112,9 @@
     <string name="premium_stub_title">Analytics is available in Premium</string>
     <string name="premium_stub_description">Track your expenses by categories and stores with clean and visual charts.</string>
     <string name="premium_stub_btn_more">More about Premium</string>
+    <string name="secret_dialog_title">Secret Menu: Subscription</string>
+    <string name="secret_role_regular">Regular User (Regular)</string>
+    <string name="secret_role_premium">Premium Subscription (Premium)</string>
+    <string name="secret_dialog_btn_cancel">Cancel</string>
+    <string name="secret_toast_regular_activated">Regular access activated</string>
 </resources>

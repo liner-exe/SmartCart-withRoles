@@ -257,26 +257,29 @@ public class FragmentSettings extends Fragment {
     }
 
     private void showSecretPremiumDialog() {
-        String[] options = { "Обычный пользователь (Regular)", "Премиум подписка (Premium)" };
+        String[] options = {
+                getString(R.string.secret_role_regular),
+                getString(R.string.secret_role_premium)
+        };
 
         UserRole currentRole = settingsViewModel.userRole.getValue();
         int checkedItem = (currentRole == UserRole.PREMIUM) ? 1 : 0;
 
         new MaterialAlertDialogBuilder(requireContext())
-                .setTitle("Секретное меню: Подписка")
+                .setTitle(getString(R.string.secret_dialog_title))
                 .setSingleChoiceItems(options, checkedItem, (dialog, which) -> {
                     UserRole selectedRole = (which == 1) ? UserRole.PREMIUM : UserRole.REGULAR;
 
                     settingsViewModel.changeUserRole(selectedRole);
 
                     String message = (selectedRole == UserRole.PREMIUM)
-                            ? "Активирован Premium доступ! 🎉"
-                            : "Активирован обычный доступ";
+                            ? getString(R.string.premium_dialog_success_toast)
+                            : getString(R.string.secret_toast_regular_activated);
                     Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show();
 
                     dialog.dismiss();
                 })
-                .setNegativeButton("Отмена", null)
+                .setNegativeButton(getString(R.string.secret_dialog_btn_cancel), null)
                 .show();
     }
 }
