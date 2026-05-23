@@ -99,4 +99,17 @@
     <string name="list_item_no_category">Not selected</string>
     <string name="ps_empty_list_title">No products</string>
     <string name="monitoring_categories_title">Expenses by category</string>
+    <string name="premium_feature_analytics">Full access to expense analytics</string>
+    <string name="premium_feature_charts">Interactive charts by categories and stores</string>
+    <string name="premium_feature_unlimited">Unlimited lists, categories, and products</string>
+    <string name="premium_feature_stores">Ability to create and manage stores</string>
+    <string name="premium_feature_currency">Full multi-currency support without limits</string>
+    <string name="premium_feature_themes">Ability to change application themes</string>
+    <string name="premium_dialog_title">SmartCart Premium Features</string>
+    <string name="premium_dialog_btn_activate">Activate</string>
+    <string name="premium_dialog_btn_close">Close</string>
+    <string name="premium_dialog_success_toast">Premium access activated! 🎉</string>
+    <string name="premium_stub_title">Analytics is available in Premium</string>
+    <string name="premium_stub_description">Track your expenses by categories and stores with clean and visual charts.</string>
+    <string name="premium_stub_btn_more">More about Premium</string>
 </resources>

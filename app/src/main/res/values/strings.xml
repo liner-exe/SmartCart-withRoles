@@ -156,4 +156,21 @@
 
     <!-- Category Actions -->
     <string name="action_reset_category">Сбросить категорию</string>
+
+    <!-- Premium -->
+    <string name="premium_feature_analytics">Полный доступ к аналитике расходов</string>
+    <string name="premium_feature_charts">Интерактивные графики по категориям и магазинам</string>
+    <string name="premium_feature_unlimited">Неограниченное создание списков, категорий и продуктов</string>
+    <string name="premium_feature_stores">Возможность создания магазинов</string>
+    <string name="premium_feature_currency">Поддержка мультивалютности без ограничений</string>
+    <string name="premium_feature_themes">Возможность смены тем</string>
+
+    <string name="premium_dialog_title">Возможности SmartCart Premium</string>
+    <string name="premium_dialog_btn_activate">Активировать</string>
+    <string name="premium_dialog_btn_close">Закрыть</string>
+    <string name="premium_dialog_success_toast">Активирован Premium доступ! 🎉</string>
+
+    <string name="premium_stub_title">Аналитика доступна в Premium</string>
+    <string name="premium_stub_description">Отслеживайте свои расходы по категориям и магазинам с помощью наглядных графиков.</string>
+    <string name="premium_stub_btn_more">Подробнее о Premium</string>
 </resources>

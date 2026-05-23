@@ -1,4 +1,4 @@
--keep class com.liner_exe.smartcart.** { *; }
+-keep class com.liner_exe.smartcart_roles.** { *; }
 
 -keep class * extends androidx.fragment.app.Fragment { *; }
 -keep public class * extends androidx.activity.ComponentActivity

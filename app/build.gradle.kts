@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.liner_exe.smartcart"
+    namespace = "com.liner_exe.smartcart_roles"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.liner_exe.smartcart"
+        applicationId = "com.liner_exe.smartcart_roles"
         minSdk = 29
         targetSdk = 35
         versionCode = 12
@@ -38,12 +38,12 @@ android {
         variant.outputs.all {
             val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
             if (variant.buildType.name == "release") {
-                val apkName = "SmartCart-v${variant.versionName}.apk"
+                val apkName = "SmartCart-v${variant.versionName}-roles.apk"
                 output.outputFileName = apkName
             }
 
             if (variant.buildType.name == "debug") {
-                val apkName = "SmartCart-v${variant.versionName}-debug.apk"
+                val apkName = "SmartCart-v${variant.versionName}-roles-debug.apk"
                 output.outputFileName = apkName
             }
         }

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.liner_exe.smartcart.fragments.MainFragment"
+        android:name="com.liner_exe.smartcart_roles.fragments.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentList"
-        android:name="com.liner_exe.smartcart.fragments.FragmentList"
+        android:name="com.liner_exe.smartcart_roles.fragments.FragmentList"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
@@ -83,7 +83,7 @@
     </fragment>
     <fragment
         android:id="@+id/productsManagementFragment"
-        android:name="com.liner_exe.smartcart.fragments.ProductsManagementFragment"
+        android:name="com.liner_exe.smartcart_roles.fragments.ProductsManagementFragment"
         android:label="ProductsManagementFragment" >
         <action
             android:id="@+id/action_productsManagementFragment_to_mainFragment"
@@ -102,7 +102,7 @@
     </fragment>
     <fragment
         android:id="@+id/categoryManagementFragment"
-        android:name="com.liner_exe.smartcart.fragments.CategoriesManagementFragment"
+        android:name="com.liner_exe.smartcart_roles.fragments.CategoriesManagementFragment"
         android:label="CategoryManagementFragment" >
         <action
             android:id="@+id/action_categoryManagementFragment_to_mainFragment"
@@ -121,7 +121,7 @@
     </fragment>
     <fragment
         android:id="@+id/categoryEditFragment"
-        android:name="com.liner_exe.smartcart.fragments.CategoryEditFragment"
+        android:name="com.liner_exe.smartcart_roles.fragments.CategoryEditFragment"
         android:label="fragment_category_edit"
         tools:layout="@layout/fragment_category_edit" >
         <action
@@ -140,7 +140,7 @@
     </fragment>
     <fragment
         android:id="@+id/categorySelectionFragment"
-        android:name="com.liner_exe.smartcart.fragments.CategorySelectionFragment"
+        android:name="com.liner_exe.smartcart_roles.fragments.CategorySelectionFragment"
         android:label="CategorySelectionFragment" >
         <action
             android:id="@+id/action_categorySelectionFragment_to_productsManagementFragment"
@@ -162,7 +162,7 @@
     </fragment>
     <fragment
         android:id="@+id/productAddFragment"
-        android:name="com.liner_exe.smartcart.fragments.ListItemAddFragment"
+        android:name="com.liner_exe.smartcart_roles.fragments.ListItemAddFragment"
         android:label="ProductAddFragment" >
         <action
             android:id="@+id/action_productAddFragment_to_fragmentList"
@@ -177,7 +177,7 @@
     </fragment>
     <fragment
         android:id="@+id/storesManagementFragment"
-        android:name="com.liner_exe.smartcart.fragments.StoresManagementFragment"
+        android:name="com.liner_exe.smartcart_roles.fragments.StoresManagementFragment"
         android:label="StoresManagementFragment" >
         <action
             android:id="@+id/action_storesManagementFragment_to_mainFragment"
@@ -189,7 +189,7 @@
     </fragment>
     <fragment
         android:id="@+id/storeSelectionFragment"
-        android:name="com.liner_exe.smartcart.fragments.StoreSelectionFragment"
+        android:name="com.liner_exe.smartcart_roles.fragments.StoreSelectionFragment"
         android:label="StoreSelectionFragment" >
         <action
             android:id="@+id/action_storeSelectionFragment_to_fragmentList"

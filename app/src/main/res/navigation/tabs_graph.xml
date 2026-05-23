@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/fragmentHome"
-        android:name="com.liner_exe.smartcart.fragments.FragmentHome"
+        android:name="com.liner_exe.smartcart_roles.fragments.FragmentHome"
         android:label="FragmentHome" >
         <action
             android:id="@+id/action_fragmentHome_to_fragmentMonitoring"
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/fragmentMonitoring"
-        android:name="com.liner_exe.smartcart.fragments.FragmentMonitoring"
+        android:name="com.liner_exe.smartcart_roles.fragments.FragmentMonitoring"
         android:label="fragment_monitoring"
         tools:layout="@layout/fragment_monitoring" >
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentSettings"
-        android:name="com.liner_exe.smartcart.fragments.FragmentSettings"
+        android:name="com.liner_exe.smartcart_roles.fragments.FragmentSettings"
         android:label="FragmentSettings" >
         <action
             android:id="@+id/action_fragmentSettings_to_fragmentHome"
